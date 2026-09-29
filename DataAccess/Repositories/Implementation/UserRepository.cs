@@ -2,7 +2,7 @@ using DataAccess.Entities;
 
 namespace DataAccess.Repositories;
 
-public class UserRepository
+public class UserRepository : IUserRepository
 {
     private readonly AppDbContext _dbContext;
 
@@ -15,5 +15,14 @@ public class UserRepository
         return _dbContext.Users.Where(x => x.Username == username)
             .FirstOrDefault();
             
+    }
+
+    public void CreateUser(User user)
+    {
+        if (_dbContext.Users.Any(x => x.Username == user.Username) == false)
+        {
+            _dbContext.Users.Add(user);
+            _dbContext.SaveChanges();
+        }
     }
 }

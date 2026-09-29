@@ -4,9 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace DataAccess;
 
-public static class StartupExtensions
+public static class Startup
 {
-    public static IServiceCollection ConfigureInfrastructureServices(this IServiceCollection services)
+    public static void ConfigureInfrastructureServices(this IServiceCollection services)
     {
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddDbContext<AppDbContext>(options =>

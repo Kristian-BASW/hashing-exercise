@@ -22,6 +22,14 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+[Hh]ooks/
+[Oo]bjects/
+[Ii]nfo/
+[Rr]efs/
+
+FETCH_HEAD
+HEAD
+Packed-refs
 
 # .NET Core
 project.lock.json
