@@ -27,6 +27,8 @@ bld/
 [Ii]nfo/
 [Rr]efs/
 
+Security/app.db
+
 FETCH_HEAD
 HEAD
 Packed-refs
